@@ -1,0 +1,15 @@
+package com.WasteWisteRoutes.dtos.security;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class UserPrincipalDTO {
+    private Long id;
+    private String correo;
+    private String nombre;
+    private String rol;
+}
