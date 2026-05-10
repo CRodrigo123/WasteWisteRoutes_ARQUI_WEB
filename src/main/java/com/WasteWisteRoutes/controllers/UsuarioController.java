@@ -31,7 +31,7 @@ public class UsuarioController {
     }
     @GetMapping
     public List<Usuario> listarTodos() {
-        return usuarioService.listarUsuarios(); // Asegúrate que este método exista en tu Service
+        return usuarioService.listarUsuarios();
     }
 
     // Para eliminar (Evidencia de gestión)
