@@ -1,4 +1,4 @@
-package com.WasteWisteRoutes; // El paquete debe ser este
+package com.WasteWisteRoutes;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Grupo3Application {
 
     public static void main(String[] args) {
-        // Aquí estaba el error, ya lo corregimos quitando "utils."
         SpringApplication.run(Grupo3Application.class, args);
     }
 
