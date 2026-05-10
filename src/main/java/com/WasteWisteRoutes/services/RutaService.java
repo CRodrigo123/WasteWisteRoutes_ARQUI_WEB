@@ -38,7 +38,6 @@ public class RutaService {
         return rutaRepository.findAll();
     }
 
-    // Método para eliminar una ruta (DELETE)
     public void eliminarRuta(Long id) {
         rutaRepository.deleteById(id);
     }
