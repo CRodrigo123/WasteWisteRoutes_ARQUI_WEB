@@ -21,12 +21,11 @@ public class SecurityConfig {
                 .cors(cors -> cors.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
-                                        "/",
-                                        "/api/v1/rutas/**",
-                                        "/api/usuarios/**",
-                                        "/api/reportes",
-                                        "/api/reportes/**"
-                                ).permitAll()
+                                "/",
+                                "/api/v1/rutas/**",
+                                "/api/usuarios/**",
+                                "/api/reportes/**"
+                        ).permitAll()
                         .anyRequest().authenticated()
 
                 )
