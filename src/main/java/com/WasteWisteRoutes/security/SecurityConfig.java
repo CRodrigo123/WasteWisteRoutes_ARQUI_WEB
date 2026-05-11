@@ -20,10 +20,13 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .cors(cors -> cors.disable())
                 .authorizeHttpRequests(auth -> auth
-                        // Agregamos / a todas para que funcionen los sub-endpoints
-                        .requestMatchers("/api/v1/rutas/**").permitAll()   // Para /crear, /listar, etc.
-                        .requestMatchers("/api/usuarios/**").permitAll()  // Para /registro, /login, etc.
-                        .requestMatchers("/api/reportes", "/api/reportes/**").permitAll()
+                        .requestMatchers(
+                                        "/",
+                                        "/api/v1/rutas/**",
+                                        "/api/usuarios/**",
+                                        "/api/reportes",
+                                        "/api/reportes/**"
+                                ).permitAll()
                         .anyRequest().authenticated()
 
                 )
