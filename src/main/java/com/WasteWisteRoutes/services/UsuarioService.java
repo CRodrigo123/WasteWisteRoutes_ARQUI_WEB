@@ -15,20 +15,19 @@ public class UsuarioService {
 
     public Usuario registrarUsuario(Usuario usuario) {
         usuario.setFechaRegistro(LocalDateTime.now());
-        // Aquí se agregaría la lógica de cifrado de password si fuera necesario
         return usuarioRepository.save(usuario);
     }
 
     public Usuario validarLogin(String correo, String password) {
         return usuarioRepository.buscarPorCorreo(correo)
-                .filter(u -> u.getPassword().equals(password)) // Simplificado para el ejemplo
+                .filter(u -> u.getPassword().equals(password))
                 .orElse(null);
     }
     public List<Usuario> listarUsuarios() {
-        return usuarioRepository.findAll(); // Esto usa el JpaRepository para traer a todos
+        return usuarioRepository.findAll();
     }
 
     public void eliminar(Long id) {
-        usuarioRepository.deleteById(id); // Esto borra al usuario por su ID
+        usuarioRepository.deleteById(id);
     }
 }

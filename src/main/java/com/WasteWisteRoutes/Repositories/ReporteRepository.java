@@ -10,7 +10,6 @@ import java.util.List;
 @Repository
 public interface ReporteRepository extends JpaRepository<Reporte, Long> {
 
-    // Consulta personalizada para obtener reportes pendientes de una empresa específica
     @Query("SELECT r FROM Reporte r WHERE r.empresa.id = :empresaId AND r.estado = :estado")
     List<Reporte> buscarPorEmpresaYEstado(@Param("empresaId") Long empresaId, @Param("estado") String estado);
 }
